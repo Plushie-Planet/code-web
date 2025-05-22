@@ -1,23 +1,25 @@
+   @media (max-width: 768px) { /* Para tablets y móviles */
+       .contenedor-secciones {
+           grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+       }
+       .producto img {
+           width: 40vw; /* Ajustar el ancho de la imagen */
+       }
+       .comment {
+           margin-left: 10px; /* Ajustar los márgenes */
+           margin-right: 10px;
+       }
+   }
 /*menu*/
-@media (max-width: 480px) {
-  /* Estilos para pantallas pequeñas (móviles) */
-  body {
-    width: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    padding: 0;
-    background-color: blanchedalmond;
-    text-align: center;
-    text-decoration: none;
-}
-}
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
     padding: 0;
     background-color: blanchedalmond;
     text-align: center;
     text-decoration: none;
 }
+
 header {
 
     font-family: Arial;
@@ -50,10 +52,9 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
 }
-/**/
+/*secciones*/
 section {
     padding: 40px 20px;
-    margin: 0px;
     text-decoration: none;
 }
 
@@ -77,7 +78,7 @@ section {
 }
 
 .producto img {
-    width: 10%;
+    width: 150px;
     height: auto;
     border-radius: 10px;
     margin-top: 10px;
@@ -216,12 +217,6 @@ p {
             font-size: 1.2em;
             cursor: pointer;
         }
-
-
-
-
-
-
 
 
 
