@@ -30,48 +30,46 @@
   </style>
 </head>
 <body bgcolor="pink"><center>
-  <div class="mi-contenedor"><br><br>
-  <h1>Formulario de Compra</h1>
-  <form id="paymentForm">
-    <div class="form-group">
-      <label>Seleccione método de pago:</label><br><br>
-      <input type="radio" name="metodoPago" value="efectivo" checked> Efectivo
-      <input type="radio" name="metodoPago" value="tarjeta"> Tarjeta
-    </div>
-
-    <div id="datosTarjeta" class="form-group hidden">
-      <label>Número de tarjeta:</label><br>
-      <input type="text" name="numeroTarjeta" maxlength="16">
-      <br><br>
-      <label>NIP:</label><br>
-      <input type="password" name="nip" maxlength="4">
-    </div>
-
-    <div id="datosGenerales">
-      <div class="form-group">
-        <label>Nombre:</label><br>
-        <input type="text" name="nombre">
-      </div>
-      <div class="form-group">
-        <label>Apellido:</label><br>
-        <input type="text" name="apellido">
-      </div>
-      <div class="form-group">
-        <label>Correo electrónico:</label><br>
-        <input type="email" name="correo">
-      </div>
-      <div class="form-group">
-        <label>Dirección de casa:</label><br>
-        <input type="text" name="direccion">
-      </div>
-      <div class="form-group">
-        <label>Número de casa:</label><br>
-        <input type="text" name="numeroCasa">
-      </div>
-    </div>
-    <br>
-    <button type="submit">Comprar</button>
-  </form></center>
+ <div class="mi-contenedor"><br><br>
+    <h1>Formulario de Compra</h1>
+    <form id="paymentForm">
+        <div class="form-group">
+            <label>Seleccione método de pago:</label><br><br>
+            <input type="radio" name="metodoPago" value="efectivo" checked onclick="mostrarOcultar(this.value)"> Efectivo
+            <input type="radio" name="metodoPago" value="tarjeta" onclick="mostrarOcultar(this.value)"> Tarjeta
+        </div>
+        <div id="datosTarjeta" class="form-group hidden" style="display: none;">
+            <label>Número de tarjeta:</label><br>
+            <input type="text" name="numeroTarjeta" maxlength="16">
+            <br><br>
+            <label>NIP: </label><br>
+            <input type="password" name="nip" maxlength="4">
+        </div>
+        <div id="datosGenerales">
+            <div class="form-group">
+                <label>Nombre: </label><br>
+                <input type="text" name="nombre">
+            </div>
+            <div class="form-group">
+                <label>Apellido: </label><br>
+                <input type="text" name="apellido">
+            </div>
+            <div class="form-group">
+                <label>Correo electrónico: </label><br>
+                <input type="email" name="correo">
+            </div>
+            <div class="form-group">
+                <label>Dirección de casa: </label><br>
+                <input type="text" name="direccion">
+            </div>
+            <div class="form-group">
+                <label>Número de casa: </label><br>
+                <input type="text" name="numeroCasa">
+            </div>
+        </div>
+        <br>
+        <button type="submit">Comprar</button>
+    </form>
 </div>
 
   <script>
@@ -93,9 +91,15 @@
       alert('Pedido realizado con éxito');
       window.location.href = 'catalogo.html';
     });
-
-
     actualizarFormulario();
+    function mostrarOcultar(metodoPago) {
+    var datosTarjeta = document.getElementById("datosTarjeta");
+    if (metodoPago === "tarjeta") {
+        datosTarjeta.style.display = "block"; 
+    } else {
+        datosTarjeta.style.display = "none";
+    }
+}
   </script>
 </body>
 </html>
