@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sección</title>
+  <style>
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff5f8;
+  color: #333;
+  
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: pink;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.cart span {
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+h1 {
+  margin: 0;
+  font-family: New Times Roman;
+}
+
+section {
+  padding: 2rem;
+}
+
+.categorias h2,
+.productos h2 {
+  margin-bottom: 1rem;
+}
+
+.categoria-lista {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.categoria-lista button {
+  background-color: pink;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.categoria-lista button:hover {
+  background-color: pink;
+}
+
+.producto-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.producto {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  text-decoration: none;
+}
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.producto h3 {
+  margin: 0.5rem 0;
+}
+
+.producto p {
+  font-weight: bold;
+  color: #e91e63;
+  text-decoration: none;
+}
+
+.producto button {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.producto button:hover {
+  background-color: #d81b60;
+}
+
+a {
+  text-decoration: none;
+  color: dimgrey;
+  font-family: New Times Roman;
+}
+
+.regresar {
+  margin-top: 10px;
+  margin-left: 26px;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.regresar button {
+  background-color: pink;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.regresar button:hover {
+  background-color: pink;
+}
+
+.carro {
+  margin-top: -10px;
+  margin-left: 26px;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.carro button {
+  background-color: pink;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carro button:hover {
+  background-color: pink;
+}
+
+.comprar {
+  margin-top: -30px;
+  margin-left: 130px;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.comprar button {
+  background-color: pink;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.comprar button:hover {
+  background-color: pink;
+}
+
+button{
+   background-color: pink;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+}
+  
+ </style>
+</head>
+<body>
+  <header>
+    <h1>Plushie Planet</h1>
+    <div class="cart">
+      <span>🛒 Carrito: <span id="cart-count">0</span> items</span>
+      <span>Total: $<span id="cart-total">0.00</span></span>
+    </div>
+  </header>
+  <div class="regresar">
+     <button><a href="index.html">REGRESAR</a></button>
+  </div>
+
+  <section class="categorias">
+    <h2>Categorías</h2>
+    <div class="categoria-lista">
+      <button><a href="P_grandes.html">Peluches Grandes</a></button>
+      <button><a href="p_pequeños.html">Peluches Pequeños</a></button>
+      <button><a href="p_personalizados.html">Peluches Personalizados</a></button>
+      <button><a href="p_personajes.html">Peluches de Personajes</a></button>
+      <button><a href="p_ofertas_especiales.html">Ofertas Especiales</a></button>
+    </div>
+  </section>
+
+  <section class="productos">
+    <h2>PELUCHES PEQUEÑOS</h2>
+    <div class="producto-lista">
+      <div class="producto">
+        <img src="oso4.jpg" alt="Peluche Oso">
+        <h3><a href="roll_bear.html">Roll Bear</a></h3>
+        <p>$200.99</p>
+        <button onclick="agregarAlCarrito('Peluche Roll Bear', 200.99)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="garfield.jpg" alt="Peluche">
+        <h3><a href="garfield.html">Garfield</a></h3>
+        <p>$292.99</p>
+        <button onclick="agregarAlCarrito('Peluche Garfield', 292.99)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="buny.jpg" alt="Peluche">
+        <h3><a href="bunny.html">Bunny</a></h3>
+        <p>$175.99</p>
+        <button onclick="agregarAlCarrito('Peluche Bunny', 175.99)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="oso7.jpg" alt="Peluche">
+        <h3><a href="coco.html">Coco</a></h3>
+        <p>$220.99</p>
+        <button onclick="agregarAlCarrito('Peluche Coco', 220.99)">Agregar al carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="carro">
+    <button onclick="mostrarCarrito()">Ver Carrito</button>
+  </div>
+
+  <section id="carrito-detalle" style="display:none; padding: 2rem;">
+    <h2>Detalle del Carrito</h2>
+    <ul id="lista-carrito"></ul>
+    <p>Total a pagar: $<span id="carrito-total"></span></p>
+    <p id="mensaje-compra" style="font-weight: bold; color: green;"></p>
+  </section>
+  <div class="comprar">
+    <button onclick="comprar()">Comprar</button>
+  </div>
+
+  <script>
+    let total = 0;
+    let cantidad = 0;
+    const carrito = [];
+
+    function agregarAlCarrito(nombre, precio) {
+      carrito.push({ nombre, precio });
+      total += precio;
+      cantidad++;
+      alert("El producto ha sido añadido al carrito.")
+      document.getElementById('cart-total').textContent = total.toFixed(2);
+      document.getElementById('cart-count').textContent = cantidad;
+    }
+
+    function mostrarCarrito() {
+      const lista = document.getElementById('lista-carrito');
+      lista.innerHTML = '';
+      carrito.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.textContent = `${item.nombre} - $${item.precio.toFixed(2)}`;
+
+        const eliminarBtn = document.createElement('button');
+        eliminarBtn.textContent = 'Eliminar';
+        eliminarBtn.style.marginLeft = '10px';
+        eliminarBtn.onclick = () => eliminarDelCarrito(index);
+
+        li.appendChild(eliminarBtn);
+        lista.appendChild(li);
+      });
+      document.getElementById('carrito-total').textContent = total.toFixed(2);
+      document.getElementById('carrito-detalle').style.display = 'block';
+    }
+
+    function eliminarDelCarrito(index) {
+      total -= carrito[index].precio;
+      cantidad--;
+      carrito.splice(index, 1);
+      document.getElementById('cart-total').textContent = total.toFixed(2);
+      document.getElementById('cart-count').textContent = cantidad;
+      mostrarCarrito();
+    }
+
+    function comprar() {
+      if (carrito.length === 0) {
+        alert('El carrito está vacío');
+        return;
+      }
+      document.getElementById('mensaje-compra').textContent = `Gracias por su compra. El total a pagar es $${total.toFixed(2)}. ¡Operación exitosa!`;
+      carrito.length = 0;
+      total = 0;
+      cantidad = 0;
+      document.getElementById('cart-total').textContent = '0.00';
+      document.getElementById('cart-count').textContent = '0';
+      document.getElementById('lista-carrito').innerHTML = '';
+      document.getElementById('carrito-total').textContent = '0.00';
+    }
+  </script>
+</body>
+</html>

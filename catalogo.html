@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="catalogo.css">
+    <title> Plushie Planet | Catálogo</title>
+</head>
+<body bgcolor="skyblue">
+    <header>
+    <div class="header">
+        <img src="logo.png" alt="logo" class="header-img">   
+        <div>Plushie Planet</div>
+    </div>
+    <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-item">INICIO</a></li>
+          <li><a href="index.html" class="nav-item">SECCIONES</a></li>
+          <li><a href="index.html" class="nav-item">NOSOTROS</a></li>
+          <li><a href="index.html" target="_blank" class="nav-item">CONTACTO</a></li>
+          <br>
+        </ul>
+    </nav>  
+    <section id="anuncios">
+        <div class="banner"><marquee>¡Descuento del 30% en toda la tienda!</marquee></div>
+        <button id="abrirModal">Ver Oferta Especial</button>
+    </section>
+    </header>
+    <div id="modal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <h2>Oferta Especial</h2>
+            <p>Compra 2 peluches y llévate un tercero gratis. ¡Solo por tiempo limitado!</p>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("abrirModal").addEventListener("click", function() {
+            document.getElementById("modal").style.display = "block";
+        });
+        
+        document.querySelector(".cerrar").addEventListener("click", function() {
+            document.getElementById("modal").style.display = "none";
+        });
+    </script>  
+
+    <h1>Catálogo</h1>
+    <div class="products">
+        <div class="product">
+            <img src="oso4.jpg" alt="Oso de peluche color crema">
+            <h3><a href="roll_bear.html">Roll Bear</a></h3>
+            <p>$200.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="rata.jpg" alt="Peluche de personaje Remy">
+            <h3><a href="remy.html">Remy</a></h3>
+            <p>$150.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="kuromilila.jpg" alt="Peluche de personaje Kuromi en color lila">
+            <h3><a href="kuromi.html">Kuromi</h3>
+            <p>$134.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="oso1.jpg" alt="Oso de peluche color beige">
+            <h3><a href="cream_bear.html">Cream Bear</h3>
+            <p>$300.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="osorosa.jpg" alt="Oso de peluche en color rosado">
+            <h3><a href="pink_cream.html">Pink Cream</h3>
+            <p>$180.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="osoo.jpg" alt="Peluchito">
+            <h3><a href="bear.html">Bear</h3>
+            <p>$450.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="oso8.jpg" alt="Peluchito">
+            <h3><a href="caramelo.html">Caramelo</h3>
+            <p>$320.99</p>
+           <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="buny.jpg" alt="Peluchito">
+            <h3><a href="bunny.html">Bunny</h3>
+            <p>$175.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="oso2.jpg" alt="Peluchito">
+            <h3><a href="coffe_bear.html">Coffe Bear</h3>
+            <p>$340.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="oso3.jpg" alt="Peluchito">
+            <h3><a href="fluff.html">Fluff</h3>
+            <p>$349.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+                <div class="product">
+            <img src="oso7.jpg" alt="Peluchito">
+            <h3><a href="coco.html">Coco</h3>
+            <p>$220.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="garfield.jpg" alt="Peluchito">
+            <h3><a href="garfield.html">Garfield</h3>
+            <p>$292.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="kuromirosa.jpg" alt="Peluchito">
+            <h3><a href="kuromi_dos.html">Kuromi 2</h3>
+            <p>$200.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="panda.jpg" alt="Peluchito">
+            <h3><a href="oreo.html">Oreo</h3>
+            <p>$524.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="oso5.jpg">
+            <h3><a href="teddy_bear.html">Teddy Bear</h3>
+            <p>$250.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="stitch.jpg">
+            <h3><a href="stitch.html">Stitch</h3>
+            <p>$324.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="snoopy algodon.jpg">
+            <h3><a href="snoopy.html">Snoopy</h3>
+            <p>$425.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="peluche kuro.jpg">
+            <h3><a href="kuromi_tres.html">Kuromi 3</h3>
+            <p>$99.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="personalizado.jpg">
+            <h3><a href="kitty_cat.html">Kitty Cat</h3>
+            <p>$150.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="ositocar.jpg">
+            <h3><a href="grumpy_bear.html">Grumpy Bear</h3>
+            <p>$437.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="oso6.jpg">
+            <h3><a href="candy.html">Candy</h3>
+            <p>$270.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="kuromifresas.jpg">
+            <h3><a href="kuromi_cuatro.html">Kuromi 4</h3>
+            <p>$170.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="moñocaf.jpg">
+            <h3><a href="miel.html">Miel</h3>
+            <p>$99.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="graduacion.jpg">
+            <h3><a href="nieve.html">Nieve</h3>
+            <p>$150.99</p>
+            <button class="cart-button"><a href="pago.html">Comprar</a></button>
+        </div>
+    </div>
+</body>
+</html>

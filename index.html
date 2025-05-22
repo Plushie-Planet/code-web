@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plushie Planet</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div>Bienvenido a Plushie Planet</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="catalogo.html">Productos</a></li>
+                <li><a href="#secciones">Secciones</a></li>
+                <li><a href="#nosotros">Sobre Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>     
+        </nav>  
+    </header>
+
+    <section id="anuncios">
+        <div class="banner"><marquee>¡Descuento del 30% en toda la tienda!</marquee></div>
+    </section>
+    
+    <section id="inicio">
+        <h2>Los peluches más adorables</h2>
+        <p>Descubre nuestra increíble colección de peluches de alta calidad.</p>
+    </section>
+
+    <section id="secciones">
+        <h2>Secciones de Productos destacados</h2>
+        <div class="contenedor-secciones">
+            <div class="seccion"><a href="P_grandes.html"><img src="oso1.jpg" width="250px" height="300px"></a>Peluches Grandes</div>
+
+            <div class="seccion"><a href="p_pequeños.html"><img src="buny.jpg" width="250px" height="300px"></a>Peluches Pequeños</div>
+
+            <div class="seccion"><a href="p_personalizados.html"><img src="personalizado.jpg" width="250px" height="300px"></a>Peluches Personalizados</div>
+
+            <div class="seccion"><a href="p_animales.html"><img src="oso3.jpg" width="250px" height="300px"></a>Peluches más comprados</div>
+
+            <div class="seccion"><a href="p_personajes.html"><img src="kuromifresas.jpg" width="250px" height="300px"></a>Peluches de Personajes</div>
+
+            <div class="seccion"><a href="p_ofertas_especiales.html"><img src="stitch.jpg" width="250px" height="300px"></a>Ofertas Especiales</div>
+        </div>
+    </section>
+
+    <section id="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>Bienvenidos a Plushie Planet, el lugar donde la ternura y la calidad se encuentran. Fundada con la pasion por crear sonrisas, <br> nuestra empresa se dedica a diseñar y distrubuir peluches que no solo son adorables, sino tambien seguros y duraderos. En <br> Plushie Planet creemos que cada peluche tiene historia que contar y un lugar especial en el corazon de quienes los abrazan.</p>
+    </section>
+
+    <div class="comments-section">
+        <h3>Comentarios</h3>
+        <input type="text" id="username" placeholder="Ingresa tu usuario">
+        <br><br>
+        <textarea id="commentInput" placeholder="Escribe tu comentario aquí..."></textarea>
+        <br>
+        <button class="comment-btn" onclick="addComment()">Enviar comentario</button>
+        <div class="comments-list" id="commentsList"></div>
+    </div>
+    <div class="borrar">
+        <div id="commentsContainer"></div>
+        <button onclick="clearComments()">🗑️</button>
+    </div>
+    <script>
+        function displayComments() {
+            const commentsContainer = document.getElementById("commentsContainer");
+            commentsContainer.innerHTML = ""; 
+            const comments = JSON.parse(localStorage.getItem("comments")) || []; 
+            if (comments.length === 0) {
+                commentsContainer.innerHTML = "<p>No hay comentarios.</p>";
+            } else {
+                comments.forEach(comment => {
+                    const commentElement = document.createElement("p");
+                    commentElement.textContent = comment;
+                    commentsContainer.appendChild(commentElement);
+                });
+            }
+        }
+
+        
+        function clearComments() {
+            localStorage.removeItem("comments"); 
+            displayComments();
+            alert("Comentarios borrados."); 
+        }
+
+        
+        window.onload = displayComments;
+    </script>
+</body>
+</html>
+
+
+    <button class="top-btn" onclick="scrollToTop()">⬆</button>
+
+    <script>
+        function addComment() {
+            const name = document.getElementById("username").value.trim();
+            const comment = document.getElementById("commentInput").value.trim();
+            if (name && comment) {
+                const commentData = { name, comment };
+                let comments = JSON.parse(localStorage.getItem("comments")) || [];
+                comments.push(commentData);
+                localStorage.setItem("comments", JSON.stringify(comments));
+                displayComments();
+                document.getElementById("commentInput").value = "";
+                document.getElementById("username").value = "";
+            }
+        }
+
+        function displayComments() {
+            const commentsList = document.getElementById("commentsList");
+            commentsList.innerHTML = "";
+            const comments = JSON.parse(localStorage.getItem("comments")) || [];
+            comments.forEach(({ name, comment }) => {
+                const commentBox = document.createElement("div");
+                commentBox.className = "comment";
+                commentBox.innerHTML = `<strong>${name}:</strong> ${comment}`;
+                commentsList.appendChild(commentBox);
+            });
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        window.onload = displayComments;
+    </script>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Escríbenos a contacto@plushieplanet.com</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61576332931570&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://www.instagram.com/plushie_planet_?igsh=MTNzcmVraml1ZW5hdw==" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://x.com/Plushie_Planet?t=OBbj490642_Ij3B0AEndXQ&s=03" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://wa.me/526642230665 " target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Plushie Planet - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
